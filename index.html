@@ -2,23 +2,45 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
+    <title>DragAnDrop</title>
   </head>
   <body>
     <style>
-      #drag-file {
-          background-color: blue;
+      body {
+        text-align: center;
+        background-color: #717C89;
+      }
+      #encrypt {
+          background-color: #DB5461;
+          color: #F1EDEE;
+          text-align: center;
+          width:120px;
+          height:50px;
+          margin: 5px;
+      }
+      #decrypt {
+          background-color: #ADF6B1;
           color:white;
           text-align: center;
-          width:300px;
-          height:300px;
+          width:120px;
+          height:50px;
+          margin: 5px;
+      }
+      #passphrase {
+        width: 120px;
+        margin: 5px;
       }
   </style>
-  <div id="drag-file">
-      <p>Drag your files here</p>
+  <div>
+    <input id="passphrase" type="password" placeholder="passphrase" autofocus/>
+  </div>
+  <div id="encrypt">
+      <p>Encrypt</p>
+  </div>
+  <div id="decrypt">
+      <p>Decrypt</p>
   </div>
   <script>
-      // You can also require other files to run in this process
       require('./renderer.js')
     </script>
   </body>
