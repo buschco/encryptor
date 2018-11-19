@@ -1,5 +1,6 @@
 {
   "name": "encrypter",
+  "productName": "encrypter",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",

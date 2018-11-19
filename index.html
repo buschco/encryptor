@@ -2,43 +2,50 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>DragAnDrop</title>
+    <title>Encryptor</title>
   </head>
   <body>
     <style>
       body {
         text-align: center;
-        background-color: #717C89;
+        background-color: #EBEBEB;
       }
-      #encrypt {
-          background-color: #DB5461;
-          color: #F1EDEE;
-          text-align: center;
-          width:120px;
-          height:50px;
-          margin: 5px;
+      .row {
+        width: 100%;
+        display:inline-block;
       }
-      #decrypt {
-          background-color: #ADF6B1;
-          color:white;
-          text-align: center;
-          width:120px;
-          height:50px;
-          margin: 5px;
+      .row-element{
+        width: 32%;
+        float: left;
+        margin-bottom: 10px;
       }
-      #passphrase {
-        width: 120px;
-        margin: 5px;
+      .arrow {
+        margin-top: 10px;
+        height: 40px;
+      }
+      .lock {
+        margin-top: 5px;
+        height: 50px;
+      }
+      .box {
+        height: 60px;
+      }
+      .pass {
+        width: 80%;
       }
   </style>
+  <div class="row">
+    <div id="encrypt" class="row-element box"><svg width="100%" height="100%" viewBox="0 0 74 74" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;"><rect x="2" y="2" width="69.266" height="69.266" style="fill:none;stroke:#000;stroke-width:4px;"/></svg></div>
+    <div class="row-element arrow"><svg width="100%" height="100%" viewBox="0 0 25 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;"><path id="Back" d="M4,0l21,20.8l-21,21.2l-4,-4l17,-17.2l-17,-16.8l4,-4Z" style="fill-rule:nonzero;"/></svg></div>
+    <div class="row-element lock"><svg width="100%" height="100%" viewBox="0 0 35 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;"><g><path d="M5.176,23.005c0,-6.396 -0.363,-20.208 12.303,-20.208c12.666,0 12.302,13.812 12.302,20.208" style="fill:none;stroke:#999;stroke-width:5.59px;"/><rect x="0" y="23.005" width="34.958" height="26.894" style="fill:#b49300;"/></g></svg></div>
+  </div>
+  <div class="row">
+    <div class="row-element arrow"><svg width="100%" height="100%" viewBox="0 0 25 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;"><path id="Back" d="M21,0l-21,20.8l21,21.2l4,-4l-17,-17.2l17,-16.8l-4,-4Z" style="fill-rule:nonzero;"/></svg></div>
+    <div class="row-element lock"><svg width="100%" height="100%" viewBox="0 0 55 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;"><g><path d="M2.798,23.005c0,-6.396 -0.364,-20.208 12.302,-20.208c12.666,0 12.303,13.812 12.303,20.208" style="fill:none;stroke:#999;stroke-width:5.59px;"/><rect x="19.951" y="23.005" width="34.958" height="26.894" style="fill:#b49300;"/></g></svg></div>
+    <div id="decrypt" class="row-element box"><svg width="100%" height="100%" viewBox="0 0 74 74" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;"><rect x="2" y="2" width="69.266" height="69.266" style="fill:none;stroke:#000;stroke-width:4px;"/></svg></div>
+  </div>
   <div>
-    <input id="passphrase" type="password" placeholder="passphrase" autofocus/>
-  </div>
-  <div id="encrypt">
-      <p>Encrypt</p>
-  </div>
-  <div id="decrypt">
-      <p>Decrypt</p>
+    <input class="pass" id="passphrase" type="password" placeholder="passphrase" autofocus/>
   </div>
   <script>
       require('./renderer.js')
